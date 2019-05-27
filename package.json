@@ -1,0 +1,56 @@
+{
+  "name": "light-box",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@storybook/react": "^5.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-icons": "^3.7.0",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "test": "REACT_APP_IS_TEST_MODE=true react-scripts test",
+    "e2e": "REACT_APP_IS_TEST_MODE=true BROWSER=none concurrently \"yarn start\" \"cypress run --browser electron --parallel\" --kill-others",
+    "e2e:open": "REACT_APP_IS_TEST_MODE=true BROWSER=none concurrently \"yarn start\" \"cypress open --browser canary\" --kill-others",
+    "e2e:storybook": "REACT_APP_IS_TEST_MODE=true BROWSER=none concurrently \"yarn storybook\" \"cypress open --browser canary\" --kill-others",
+    "e2e:specific": "cypress yourcase.js",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.1.1",
+    "@storybook/addon-links": "^5.1.1",
+    "@storybook/addon-viewport": "^5.1.1",
+    "@storybook/react": "^5.1.1",
+    "@testing-library/cypress": "^4.0.1",
+    "@testing-library/react": "^8.0.1",
+    "concurrently": "^4.1.0",
+    "cypress": "^3.3.1",
+    "cypress-promise": "^1.0.2",
+    "cypress-react-unit-test": "^2.4.1",
+    "debounce": "^1.2.0",
+    "react-hooks-testing-library": "^0.5.1",
+    "react-test-renderer": "^16.8.6",
+    "resize-observer-polyfill": "^1.5.1",
+    "storybook": "^1.0.0"
+  }
+}
